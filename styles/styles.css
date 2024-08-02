@@ -174,24 +174,28 @@ body {
 }
 
 .artists {
-  text-align: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 10px;
 }
 .artists__title {
-  font-size: 24px;
-  margin: 16px 0;
-  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
 }
 .artists__gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
-  padding: 16px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  transition: transform 0.3s ease-out;
 }
 .artists__item {
-  padding: 16px;
+  flex: 0 0 auto;
+  margin-right: 20px;
 }
 .artists__image {
-  width: 100%;
+  display: block;
+  max-width: 100%;
   height: auto;
 }
 
