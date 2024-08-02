@@ -22,6 +22,11 @@ body {
   font-family: "Helvetica", "Segoe UI", "Helvetica", "Arial", sans-serif;
   background-color: #000;
   color: #fff;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .header__nav {
@@ -50,6 +55,13 @@ body {
   display: flex;
   gap: 16px;
   margin-right: auto;
+}
+.header__nav .header__menu-right {
+  text-align: right;
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin-right: 20px;
 }
 .header__nav .header__social {
   display: flex;
