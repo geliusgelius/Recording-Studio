@@ -23,7 +23,7 @@ $spacing: 16px;
 }
 
 @mixin button-style {
-    background-color: $color-white;
+    background-color: $color-orange;
     color: $color-black;
     padding: $spacing / 2 $spacing;
     border: none;
@@ -39,6 +39,14 @@ $spacing: 16px;
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit; 
+}
+
 body {
     font-family: 'Helvetica', $font-stack;
     background-color: $color-black;
@@ -52,37 +60,36 @@ body {
         justify-content: space-between;
         padding: $spacing;
         background-color: $color-black;
-    }
-
-    &__logo {
-        color: $color-white;
-        font-size: 24px;
-        text-decoration: none;
         text-transform: uppercase;
-    }
 
-    &__menu {
-        list-style: none;
-        display: flex;
-        gap: $spacing * 2;
-
-        &__link {
-            color: $color-white;
-            text-decoration: none;
-            font-size: 14px;
-            text-transform: uppercase;
+        // Container for logo and menu
+        .header__nav-container {
+            display: flex;
+            align-items: center;
+            width: 100%;
         }
-    }
 
-    &__social {
-        display: flex;
-        gap: $spacing;
-
-        &-link {
+        // Logo styling
+        .header__logo {
             color: $color-white;
+            font-size: 24px;
             text-decoration: none;
-            font-size: 14px;
             text-transform: uppercase;
+            margin-right: $spacing; // Adding space between logo and menu
+        }
+
+        // Menu styling
+        .header__menu {
+            list-style: none;
+            display: flex;
+            gap: $spacing;
+            margin-right: auto; 
+        }
+
+        // Social icons container
+        .header__social {
+            display: flex;
+            gap: $spacing;
         }
     }
 
