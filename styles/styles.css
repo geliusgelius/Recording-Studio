@@ -38,6 +38,9 @@ body {
   border-radius: 50px;
   cursor: pointer;
   text-transform: uppercase;
+  width: 220px;
+  text-align: center;
+  margin-top: 16px;
 }
 .get__button:hover {
   background-color: #fff;
@@ -47,7 +50,7 @@ body {
 .header__nav {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   justify-content: space-between;
   padding: 16px;
   background-color: #000;
@@ -107,7 +110,7 @@ body {
 .header__hero {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
   text-align: center;
   height: 500px;
@@ -130,11 +133,12 @@ body {
 .section__block {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
   padding: 16px;
-  text-align: center;
+  text-align: left;
   color: #fff;
+  height: 350px;
 }
 .section__block--purple {
   background-color: #9c27b0;
@@ -148,10 +152,8 @@ body {
 .section__block--orange {
   background-color: #ff9800;
 }
-.section__block__title {
-  font-size: 24px;
+.section__block__content {
   margin-bottom: 16px;
-  text-transform: uppercase;
 }
 .section__block__button {
   background-color: #000;
@@ -160,6 +162,14 @@ body {
   border: none;
   border-radius: 50px;
   cursor: pointer;
+  text-transform: uppercase;
+  width: 220px;
+  text-align: center;
+  margin-top: 16px;
+}
+.section__title {
+  font-size: 24px;
+  margin-bottom: 16px !important;
   text-transform: uppercase;
 }
 
@@ -202,6 +212,9 @@ body {
   border-radius: 50px;
   cursor: pointer;
   text-transform: uppercase;
+  width: 220px;
+  text-align: center;
+  margin-top: 16px;
   background-color: #ffeb3b;
 }
 .join__button:hover {

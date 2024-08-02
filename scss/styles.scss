@@ -21,7 +21,7 @@ $spacing: 16px;
 @mixin flex-center {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
 }
 
 @mixin button-style {
@@ -32,6 +32,9 @@ $spacing: 16px;
     border-radius: 50px;
     cursor: pointer;
     text-transform: uppercase;
+    width: 220px;
+    text-align: center;
+    margin-top: $spacing;
 }
 
 // Reset
@@ -173,30 +176,41 @@ body {
 .section {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    
 
     &__block {
         @include flex-center;
         flex-direction: column;
         padding: $spacing;
-        text-align: center;
+        text-align: left;
+        
         color: $color-white;
+        height: 350px;
 
         &--purple { background-color: $color-purple; }
         &--black { background-color: $color-black; }
         &--green { background-color: $color-green; }
         &--orange { background-color: $color-orange; }
 
-        &__title {
-            font-size: 24px;
-            margin-bottom: $spacing;
-            text-transform: uppercase;
+   
+
+        &__content {
+            margin-bottom: $spacing; 
         }
 
         &__button {
             @include button-style;
         }
     }
+    
+    &__title {
+        font-size: 24px;
+        margin-bottom: $spacing !important;
+        text-transform: uppercase;
+    }
+
 }
+
 
 .artists {
     text-align: center;
