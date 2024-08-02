@@ -73,7 +73,6 @@ body {
     }
 }
 
-// BEM Styles
 .header {
     &__nav {
         @include flex-center;
@@ -82,14 +81,12 @@ body {
         background-color: $color-black;
         text-transform: uppercase;
 
-        // Container for logo and menu
         .header__nav-container {
             display: flex;
             align-items: center;
             width: 100%;
         }
 
-        // Logo styling
         .header__logo {
             color: $color-white;
             font-size: 24px;
@@ -98,7 +95,6 @@ body {
             margin-right: $spacing; 
         }
 
-        // Menu styling
         .header__menu {
             list-style: none;
             display: flex;
@@ -116,7 +112,6 @@ body {
                 }
             }
         }
-
 
         .header__menu-right {
             text-align: right;
@@ -138,7 +133,6 @@ body {
             }
         }
 
-        // Social icons container
         .header__social {
             display: flex;
             gap: 10px; 
