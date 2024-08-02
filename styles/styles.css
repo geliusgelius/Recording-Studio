@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../fonts/SegoeUI.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica", "Segoe UI", "Helvetica", "Arial", sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: #000;
+}
+.header__logo {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.header__menu {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+.header__menu__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.header__social {
+  display: flex;
+  gap: 16px;
+}
+.header__social-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.header__hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 500px;
+  background: url("../images/hero-bg.jpg") no-repeat center center/cover;
+}
+.header__title {
+  color: #fff;
+  font-size: 48px;
+  line-height: 1.2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
+  text-transform: uppercase;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.section__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 16px;
+  text-align: center;
+  color: #fff;
+}
+.section__block--purple {
+  background-color: #9c27b0;
+}
+.section__block--black {
+  background-color: #000;
+}
+.section__block--green {
+  background-color: #4caf50;
+}
+.section__block--orange {
+  background-color: #ff9800;
+}
+.section__block__title {
+  font-size: 24px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.section__block__button {
+  background-color: #fff;
+  color: #000;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.artists {
+  text-align: center;
+}
+.artists__title {
+  font-size: 24px;
+  margin: 16px 0;
+  text-transform: uppercase;
+}
+.artists__gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+.artists__item {
+  padding: 16px;
+}
+.artists__image {
+  width: 100%;
+  height: auto;
+}
+
+.join {
+  text-align: center;
+  padding: 16px;
+}
+.join__title {
+  font-size: 24px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.join__button {
+  background-color: #fff;
+  color: #000;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=styles.css.map */

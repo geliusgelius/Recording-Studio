@@ -1,0 +1,175 @@
+// Global variables
+$font-stack: 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+$color-white: #fff;
+$color-black: #000;
+$color-purple: #9c27b0;
+$color-green: #4caf50;
+$color-orange: #ff9800;
+$spacing: 16px;
+
+// @font-face rule to include local fonts
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('../fonts/SegoeUI.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button-style {
+    background-color: $color-white;
+    color: $color-black;
+    padding: $spacing / 2 $spacing;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica', $font-stack;
+    background-color: $color-black;
+    color: $color-white;
+}
+
+// BEM Styles
+.header {
+    &__nav {
+        @include flex-center;
+        justify-content: space-between;
+        padding: $spacing;
+        background-color: $color-black;
+    }
+
+    &__logo {
+        color: $color-white;
+        font-size: 24px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    &__menu {
+        list-style: none;
+        display: flex;
+        gap: $spacing * 2;
+
+        &__link {
+            color: $color-white;
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__social {
+        display: flex;
+        gap: $spacing;
+
+        &-link {
+            color: $color-white;
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__hero {
+        @include flex-center;
+        flex-direction: column;
+        text-align: center;
+        height: 500px;
+        background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    }
+
+    &__title {
+        color: $color-white;
+        font-size: 48px;
+        line-height: 1.2;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 $spacing;
+        text-transform: uppercase;
+    }
+}
+
+.section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &__block {
+        @include flex-center;
+        flex-direction: column;
+        padding: $spacing;
+        text-align: center;
+        color: $color-white;
+
+        &--purple { background-color: $color-purple; }
+        &--black { background-color: $color-black; }
+        &--green { background-color: $color-green; }
+        &--orange { background-color: $color-orange; }
+
+        &__title {
+            font-size: 24px;
+            margin-bottom: $spacing;
+            text-transform: uppercase;
+        }
+
+        &__button {
+            @include button-style;
+        }
+    }
+}
+
+.artists {
+    text-align: center;
+
+    &__title {
+        font-size: 24px;
+        margin: $spacing 0;
+        text-transform: uppercase;
+    }
+
+    &__gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: $spacing;
+        padding: $spacing;
+    }
+
+    &__item {
+        padding: $spacing;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.join {
+    text-align: center;
+    padding: $spacing;
+
+    &__title {
+        font-size: 24px;
+        margin-bottom: $spacing;
+        text-transform: uppercase;
+    }
+
+    &__button {
+        @include button-style;
+    }
+}
