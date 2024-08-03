@@ -1,14 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const burger = document.querySelector('.header__burger');
-    const modal = document.querySelector('.modal');
+// Добавляем обработчики событий для бургер-кнопки и модального окна
+const burger = document.querySelector('.burger');
+const modal = document.querySelector('.modal');
+const closeBtn = document.querySelector('.close-btn');
 
-    burger.addEventListener('click', () => {
-        modal.classList.toggle('show-modal');
-    });
+burger.addEventListener('click', () => {
+  modal.classList.toggle('show');
+});
 
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.classList.remove('show-modal');
-        }
-    });
+closeBtn.addEventListener('click', () => {
+  modal.classList.remove('show');
 });
