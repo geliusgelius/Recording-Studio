@@ -14,9 +14,6 @@
 
 a {
   text-decoration: none;
-}
-
-a:visited {
   color: inherit;
 }
 
@@ -105,12 +102,12 @@ body {
 .header__nav .header__social .header__social-link svg {
   width: 20px;
   height: 20px;
-  fill: .header__nav .header__social .header__social-link svg #fff;
+  fill: .header__nav .header__social .header__social-link svg #fff !important;
   transition: fill 0.3s ease;
 }
 .header__nav .header__social .header__social-link:hover svg {
-  stroke: #9c27b0;
-  fill: #9c27b0;
+  stroke: #9c27b0 !important;
+  fill: #9c27b0 !important;
   transform: scale(1.2);
   transition: 0.2s;
 }
