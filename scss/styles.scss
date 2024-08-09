@@ -394,3 +394,96 @@ body {
     
   }
   
+  .footer {
+    background-color: $color-black;
+    color: $color-white;
+    padding: $spacing * 2 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    .footer__social-link:hover  {
+        stroke: $color-white !important; 
+        fill: $color-purple !important;
+        transform: scale(1.2);
+        transition: 0.2s;
+        color: $color-purple; 
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 0 $spacing;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    &__logo {
+        font-size: 24px;
+
+        &-link {
+            color: $color-white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $color-purple;
+            }
+        }
+    }
+
+    &__menu {
+        list-style: none;
+        display: flex;
+        gap: $spacing;
+
+        li {
+            a {
+                color: $color-white;
+                text-decoration: none;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $color-purple;
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            margin-top: $spacing;
+        }
+    }
+
+    &__social {
+        display: flex;
+        gap: 10px;
+
+        &-link svg {
+            width: 24px;
+            height: 24px;
+            fill: $color-white;
+            transition: fill 0.3s ease;
+
+            &:hover {
+                fill: $color-purple;
+            }
+        }
+    }
+
+    &__bottom {
+        margin-top: $spacing;
+        border-top: 1px solid rgba($color-white, 0.1);
+        padding-top: $spacing;
+
+        .footer__copyright {
+            font-size: 14px;
+            color: rgba($color-white, 0.6);
+        }
+    }
+}
